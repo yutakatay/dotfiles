@@ -75,12 +75,17 @@ if maparg('<F5>', 'n') ==# ''
 endif
 
 " move tab
-nnoremap <F7> gt
-nnoremap <S-F7> gT
+nnoremap <F2> gT
+nnoremap <F3> gt
 
 " move buffer
-nnoremap <F2> :bprev<CR>
-nnoremap <F3> :bnext<CR>
+nnoremap <S-F2> :bprev<CR>
+nnoremap <S-F3> :bnext<CR>
+
+" tab open/close
+nnoremap <silent>gf <C-w>gf
+nnoremap <silent><C-]> <C-w><C-]><C-w>T
+nnoremap <F4> :tabclose<CR>
 
 nnoremap [q           :cprevious<CR>
 nnoremap ]q           :cnext<CR>

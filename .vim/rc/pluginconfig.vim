@@ -312,6 +312,7 @@ if s:plug.is_installed('nerdtree')
   let g:NERDTreeDirArrowExpandable = '+'
   let g:NERDTreeDirArrowCollapsible = '~'
   let g:NERDTreeWinPos = 'left'
+  let g:NERDTreeMapOpenInTab='<CR>'
   " Change IDE mode
   nnoremap <F12> :TagbarToggle<CR>:NERDTreeToggle<CR><C-w>l
   augroup MyNerdtree
@@ -472,7 +473,7 @@ if s:plug.is_installed('lightline.vim')
         \ 'colorscheme': 'wombat',
         \ 'enable': {
         \   'statusline': 1,
-        \   'tabline': 0,
+        \   'tabline': 1,
         \ },
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'gitgutter', 'filename' ], ['ctrlpmark'] ],
@@ -708,8 +709,8 @@ endif
 "-------------------------------------------------------------
 " vim-altr
 if s:plug.is_installed('vim-altr')
-  map <F6> <Plug>(altr-forward)
-  map <S-F6> <Plug>(altr-back)
+  map <F6> <Plug>(altr-forward):bufdo tab split<CR>:tablast<CR>:tabclose<CR>
+  map <S-F6> <Plug>(altr-back):bufdo tab split<CR>:tablast<CR>:tabclose<CR>
   " map <F3> <Plug>(altr-back)
 endif
 
@@ -1030,7 +1031,7 @@ endif
 " vim-bbye
 if s:plug.is_installed('vim-bbye')
   nnoremap <Leader>bd :Bdelete<CR>
-  nmap <F4> :Bdelete<CR>
+  " nmap <F4> :Bdelete<CR>
 endif
 
 "-------------------------------------------------------------

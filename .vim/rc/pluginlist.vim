@@ -82,7 +82,7 @@ Plug 'mbbill/undotree'
 " Buffer
 "Plug 'jlanzarotta/bufexplorer' " -> can't open split window
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'ap/vim-buftabline'
+"Plug 'ap/vim-buftabline' "-> use tab
 Plug 'schickling/vim-bufonly'
 Plug 'moll/vim-bbye'
 
@@ -252,9 +252,8 @@ Plug 'jasoncodes/ctrlp-modified.vim'
 "------------------------------------------------------------
 " Coding
 Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdtree', {
-    \   'on': ['NERDTree', 'NERDTreeToggle'],
-    \ }
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'thinca/vim-quickrun'
 Plug 'airblade/vim-rooter'
